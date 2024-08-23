@@ -1,6 +1,10 @@
 package org.example.Model;
 
-public class Customer {
+import java.io.Serializable;
+
+public class Customer implements Serializable {
+
+    private static final long serialVersionUID = 1234567L;
     private Long id;
     private Boolean isActive;
     private String name;

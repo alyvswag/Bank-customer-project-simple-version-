@@ -1,7 +1,7 @@
 package org.example.Model;
 
 public abstract class Db {
-    private static final Customer [] customers = new Customer[10];
+    public static final Customer [] customers = new Customer[10];
     private static final Card [] cards = new Card[20];
     public static Customer[] getCustomers() {
         return customers;

@@ -1,9 +1,11 @@
 package org.example;
 
+import org.example.Model.Db;
 import org.example.Util.CardUtil;
 import org.example.Util.CustomerUtil;
 import org.example.Util.DbUtil;
 
+import java.io.File;
 import java.util.Scanner;
 
 public class Main {
@@ -34,9 +36,11 @@ public class Main {
         switch (option){
             case 1:
                 DbUtil.addCustomer(CustomerUtil.createCustomer());
+                FileUtil.writeCustomerFile(Db.customers);
                 break;
             case 2:
-                CustomerUtil.printAllCustomer();
+//                CustomerUtil.printAllCustomer();
+                FileUtil.readCustomerFile();
                 break;
             case 3:
                 CustomerUtil.deleteCustomer();
